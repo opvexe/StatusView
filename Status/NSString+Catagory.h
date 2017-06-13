@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (Catagory)
 BOOL is_null(id object);
 
+- (CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW;
+- (CGSize)sizeWithFont:(UIFont *)font;
 @end

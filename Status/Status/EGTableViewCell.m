@@ -58,17 +58,17 @@
     [self.titlesDic removeAllObjects];
     
     
-    CGFloat sexWidth =[FormatString(@"|%@",model.age) sizeWithFont:FontPingFangSC(8) maxW:Number(80)].width;
+    CGFloat sexWidth =[FormatString(@"|%lu",(unsigned long)model.age) sizeWithFont:FontPingFangSC(8) maxW:Number(80)].width;
     switch (model.sex) {
         case SexTypeMan:{
-            [self.titles addObject:FormatString(@"男|%@",model.age)];
+            [self.titles addObject:FormatString(@"男|%lu",(unsigned long)model.age)];
             
-            [self.titlesDic setValue:@(sexWidth) forKey:FormatString(@"%@",model.age)];
+            [self.titlesDic setValue:@(sexWidth) forKey:FormatString(@"%lu",(unsigned long)model.age)];
             break;
         }
         case SexTypeWoman:{
-            [self.titles addObject:FormatString(@"女|%@",model.age)];
-            [self.titlesDic setValue:@(sexWidth) forKey:FormatString(@"%@",model.age)];
+            [self.titles addObject:FormatString(@"女|%lu",(unsigned long)model.age)];
+            [self.titlesDic setValue:@(sexWidth) forKey:FormatString(@"%lu",(unsigned long)model.age)];
             break;
         }
         default:
